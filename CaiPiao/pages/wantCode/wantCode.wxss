@@ -1,0 +1,133 @@
+.rowItem {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin-top: 20rpx;
+}
+.line{
+  width: 100%;
+  height: 15rpx;
+  background-color: #e2ddda;
+}
+.rowItemOne{
+  width: 200rpx;
+  height: 200rpx;
+  box-shadow: 10rpx 10rpx 50rpx #f2c297;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30rpx; 
+}
+.lotterySelect{
+  margin-top: 20rpx;
+}
+.lotteryLike{
+  margin-top: 20rpx;
+}
+.rowItemTow{
+  width: 200rpx;
+  height: 200rpx;
+  box-shadow: 10rpx 10rpx 50rpx #f2c297;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30rpx;
+}
+.rowItemThree{
+  width: 200rpx;
+  height: 200rpx;
+  box-shadow: 10rpx 10rpx 50rpx #f2c297;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30rpx;
+}
+
+
+.selectCodeType{
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  color: #f2c297;
+  font-size: 30rpx;
+  margin-top: 40rpx;
+  border-bottom: dashed 0.5rpx;
+}
+
+
+.sevenLottery{
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+.locationTitle{
+  margin-top: 10rpx;
+  color: #f2c297;
+  font-size: 35rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.buttonExplain{
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: green;
+  font-size: 30rpx;
+  border: solid 0.5rpx #f2c297;
+  text-align: center;
+}
+.buttonGetCode{
+  color: red;
+  font-size: 30rpx;
+  border: solid 0.5rpx #f2c297;
+  width: 100rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+}
+.locationContener{
+  width: 100%;
+  height: 150rpx;
+  margin-top: 20rpx;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.location{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.location text{
+  color: #f2c297;
+}
+.location input{
+  color: gray;
+  font-size: 30rpx;
+  border-bottom: solid 0.5rpx #f2c297;
+  margin-left: 10rpx;
+  text-align: center;
+}
+
+.fourShow{
+  width: 90%;
+  margin-top: 30rpx;
+}
+
+.fourShow input {
+  color: gray;
+  font-size: 30rpx;
+  border-bottom: solid 0.5rpx #f2c297;
+  margin-bottom: 10rpx;
+}

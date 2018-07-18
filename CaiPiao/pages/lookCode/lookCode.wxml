@@ -1,0 +1,16 @@
+<view class='container'>
+  <view class='itemContent'>
+    <text class='contentTitle'>当前生成的彩码共有：</text>
+    <text class='contentNum'>{{lotteryArr.length}}</text>
+    <text class='contentTitle'>组</text>
+  </view>
+  <block wx:for="{{lotteryArr}}" wx:key="*this" wx:for-index="index">
+    <view class='arrItem' wx:if="{{index%5==0}}">
+      <text wx:if="{{index<lotteryArr.length}}">{{lotteryArr[index]}}</text>
+      <text wx:if="{{index+1<lotteryArr.length}}">{{lotteryArr[index+1]}}</text>
+      <text wx:if="{{index+2<lotteryArr.length}}">{{lotteryArr[index+2]}}</text>
+      <text wx:if="{{index+3<lotteryArr.length}}">{{lotteryArr[index+3]}}</text>
+      <text wx:if="{{index+4<lotteryArr.length}}">{{lotteryArr[index+4]}}</text>
+    </view>
+  </block>
+</view>

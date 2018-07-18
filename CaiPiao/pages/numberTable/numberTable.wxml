@@ -1,0 +1,20 @@
+<view class='container'>
+  <block wx:for="{{tableDatas}}" wx:for-item="item" wx:key="*this" wx:for-index="index">
+    <view class='table_main'>
+      <view class='table_one'>
+        <view class='table_one_ci'>{{item.periods}}</view>
+        <view class='table_one_time'>{{item.lotteryTime}}</view>
+      </view>
+      <view class='table_sum'>
+       {{item.lotterySum}}
+      </view>
+      <view class='table_num_one'>{{item.lotteryOne}}</view>
+      <view class='table_num_tow'>{{item.lotteryTow}}</view>
+      <view class='table_num_three'>{{item.lotteryThree}}</view>
+      <view class='table_num_four'>{{item.lotteryFour}}</view>
+      <view class='table_num_five'>{{item.lotteryFive}}</view>
+      <view class='table_num_six'>{{item.lotterySix}}</view>
+      <view class='table_num_seven'>{{item.lotterySeven}}</view>
+    </view>
+  </block>
+</view>

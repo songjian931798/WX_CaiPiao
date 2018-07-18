@@ -1,0 +1,18 @@
+<!--logs.wxml-->
+<view class='mainStytle'>
+  <view class='textArea'>
+    <textarea bindinput="bindTextAreaBlur" 
+    style="height:200rpx; width:100%; background-color:#eeeeee; color:grey; padding:10rpx; box-shadow: 3rpx 3rpx 50rpx #eeeeee;" 
+    placeholder="在此输入你的意见和建议，150字以内" focus="{{focus}}" maxlength="150"/>
+  </view>
+  <view class='buttonSub' catchtap='submitSuggest'>
+  <text>提 交</text>
+  </view>
+  <view class='explainMessage'>
+    <text>说明:</text>
+    <text>1.欢迎大家对我们的小程序提出宝贵的意见和建议。</text>
+    <text>2.技术上的建议：如果您对小程序有什么好的建议，欢迎来信，如果您的想法非常棒，我们就会按照您的想法来改造我们的小程序。</text>
+    <text>3.组码：目前组码里面的功能还很少，我们希望您能提供您的组码方法，告诉我们，我们用技术将它实现，让更多的人受用</text>
+    <text>4.如果您还有其他的意见和建议，欢迎给我们来信。</text>
+  </view>
+</view>

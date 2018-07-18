@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/numberTable/numberTable",
+    "pages/lookCode/lookCode",
+    "pages/suggest/suggest",
+    "pages/wantCode/wantCode"
+  ],
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e9c2a6",
+    "navigationBarTitleText": "首 页",
+    "navigationBarTextStyle":"red"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor":"#5292ff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/shouye_normal.png",
+        "selectedIconPath": "images/shouye_select.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/wantCode/wantCode",
+        "iconPath": "images/yaoma_normal.png",
+        "selectedIconPath": "images/yaoma_select.png",
+        "text": "组码"
+      },
+      {
+        "pagePath": "pages/suggest/suggest",
+        "iconPath": "images/caiquan_normal.png",
+        "selectedIconPath": "images/caiquan_select.png",
+        "text": "反馈"
+      }
+    ]
+  },
+ 
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

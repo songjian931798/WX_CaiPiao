@@ -1,0 +1,244 @@
+<view class='container'>
+  <view class='rowItem'>
+    <view class='rowItemOne' style='background-color:{{backgroundColorOne}}' data-location='one' data-lotteryType='海南七星彩' catchtap='clickRowItem'>
+      <view class='lotteryTitle'>
+        1.体彩七星彩
+      </view>
+      <view class='lotterySelect'>
+        2.自定义选码
+      </view>
+      <view class='lotteryLike'>
+        3.智能计算
+      </view>
+    </view>
+    <view class='rowItemTow' style='background-color:{{backgroundColorTow}}' data-location='tow' data-lotteryType='体彩排列3' catchtap='clickRowItem'>
+      <view class='lotteryTitle'>
+        1.体彩排列3
+      </view>
+      <view class='lotterySelect'>
+        2.自定义选码
+      </view>
+      <view class='lotteryLike'>
+        3.智能计算
+      </view>
+    </view>
+    <view class='rowItemThree' style='background-color:{{backgroundColorThree}}' data-location='three' data-lotteryType='体彩排列5' catchtap='clickRowItem'>
+      <view class='lotteryTitle'>
+        1.体彩排列5
+      </view>
+      <view class='lotterySelect'>
+        2.自定义选码
+      </view>
+      <view class='lotteryLike'>
+        3.智能计算
+      </view>
+    </view>
+  </view>
+  <view class='rowItem'>
+    <view class='rowItemOne' style='background-color:{{backgroundColorFour}}' data-location='four' data-lotteryType='福彩3D' catchtap='clickRowItem'>
+      <view class='lotteryTitle'>
+        1.福彩3D
+      </view>
+      <view class='lotterySelect'>
+        2.自定义选码
+      </view>
+      <view class='lotteryLike'>
+        3.智能计算
+      </view>
+    </view> 
+    <view class='rowItemTow' style='background-color:{{backgroundColorFive}}' data-location='five'data-lotteryType='福彩双色球'  catchtap='clickRowItem'>
+      <view class='lotteryTitle'>
+        1.福彩双色球
+      </view>
+      <view class='lotterySelect'>
+        2.自定义选码
+      </view>
+      <view class='lotteryLike'>
+        还未开放...
+      </view>
+    </view>
+    <view class='rowItemThree' style='background-color:{{backgroundColorSix}}' data-location='six' data-lotteryType='体彩大乐透' catchtap='clickRowItem'>
+      <view class='lotteryTitle'>
+        1.体彩大乐透
+      </view>
+      <view class='lotterySelect'>
+        2.自定义选码
+      </view>
+      <view class='lotteryLike'>
+        还未开放...
+      </view>
+    </view>
+  </view>
+
+  <view class='selectCodeType'>
+    <text>{{lotteryType}}->选码方式</text>
+  </view>
+
+  <!--海南七星彩  -->
+  <view wx:if="{{lotteryType=='海南七星彩'}}" class='sevenLottery'>
+    <view class='locationTitle'>
+      <text>1.{{lotteryType}}选码定位</text>
+      <view class='buttonExplain' data-explainType='七星定' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='七星定' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='locationContener'>
+      <view class='location'>
+        <text>千</text>
+        <input maxlength="10" type="number" placeholder="千位码" bindinput="bindSevenQian"></input>
+      </view>
+      <view class='location'>
+        <text>百</text>
+        <input maxlength="10" type="number" placeholder="百位码" bindinput="bindSevenBai"></input>
+      </view>
+      <view class='location'>
+        <text>十</text>
+        <input maxlength="10" type="number" placeholder="十位码" bindinput="bindSevenShi"></input>
+      </view>
+      <view class='location'>
+        <text>个</text>
+        <input maxlength="10" type="number" placeholder="个位码" bindinput="bindSevenGe"></input>
+      </view>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='locationTitle'>
+      <text>2.{{lotteryType}}选码4字现</text>
+      <view class='buttonExplain' data-explainType='七星4' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='七星4' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='fourShow'>
+      <input maxlength="10" type="number" placeholder="输入数码，至少4个不一样数字" bindinput="bindSevenFour"></input>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='locationTitle'>
+      <text>3.{{lotteryType}}选码3字现</text>
+      <view class='buttonExplain' data-explainType='七星3' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='七星3' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='fourShow'>
+      <input maxlength="10" type="number" placeholder="输入数码，至少3个不一样数字" bindinput="bindSevenThree"></input>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='locationTitle'>
+      <text>4.{{lotteryType}}选码2字现</text>
+      <view class='buttonExplain' data-explainType='七星2' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='七星2' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='fourShow'>
+      <input maxlength="10" type="number" placeholder="输入数码，至少2个不一样数字" bindinput="bindSevenTow"></input>
+    </view>
+  </view>
+
+  <!--体彩排列3或3D  -->
+  <view wx:if="{{lotteryType=='体彩排列3'||lotteryType=='福彩3D'}}" class='sevenLottery'>
+    <view class='locationTitle'>
+      <text>1.{{lotteryType}}直选码</text>
+      <view class='buttonExplain' data-explainType='排3D直' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='排3D直' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='locationContener'>
+      <view class='location'>
+        <text>百</text>
+        <input maxlength="10" type="number" placeholder="百位码" bindinput="bindPDBai"></input>
+      </view>
+      <view class='location'>
+        <text>十</text>
+        <input maxlength="10" type="number" placeholder="十位码" bindinput="bindPDShi"></input>
+      </view>
+      <view class='location'>
+        <text>个</text>
+        <input maxlength="10" type="number" placeholder="个位码" bindinput="bindPDGe"></input>
+      </view>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='locationTitle'>
+      <text>2.{{lotteryType}}组三选码</text>
+      <view class='buttonExplain' data-explainType='组3' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='组3' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='fourShow'>
+      <input maxlength="10" type="number" placeholder="输入数码，至少2个不一样数字" bindinput="bindGroup3"></input>
+    </view>
+
+    <view class='line'></view>
+
+    <view class='locationTitle'>
+      <text>3.{{lotteryType}}组六选码</text>
+      <view class='buttonExplain' data-explainType='组6' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='组6' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='fourShow'>
+      <input maxlength="10" type="number" placeholder="输入数码，至少3个不一样数字" bindinput="bindGroup6"></input>
+    </view>
+  </view>
+
+  <!--体彩排列5  -->
+  <view wx:if="{{lotteryType=='体彩排列5'}}" class='sevenLottery'>
+    <view class='locationTitle'>
+      <text>1.{{lotteryType}}直选码</text>
+      <view class='buttonExplain' data-explainType='排5' catchtap='clickExplainShow'>
+        说 明
+      </view>
+      <view class='buttonGetCode' data-explainType='排5' catchtap='clickCalculateCode'>
+        算 码
+      </view>
+    </view>
+    <view class='locationContener'>
+      <view class='location'>
+        <text>万</text>
+        <input maxlength="10" type="number" placeholder="万位码" bindinput="bindP5Wan"></input>
+      </view> 
+      <view class='location'>
+        <text>千</text>
+      <input maxlength="10" type="number" placeholder="千位码" bindinput="bindP5Qian"></input>
+      </view> 
+      <view class='location'>
+        <text>百</text>
+        <input maxlength="10" type="number" placeholder="百位码" bindinput="bindP5Bai"></input>
+      </view>
+      <view class='location'>
+        <text>十</text>
+        <input maxlength="10" type="number" placeholder="十位码" bindinput="bindP5Shi"></input>
+      </view>
+      <view class='location'>
+        <text>个</text>
+        <input maxlength="10" type="number" placeholder="个位码" bindinput="bindP5Ge"></input>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,82 @@
+.table_main{
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  border-top: dashed 0.5rpx;
+  border-bottom: dashed 0.5rpx;
+  border-color: #eeeeee;
+}
+.table_one{
+  width: 140rpx;
+  height: 80rpx;
+  display: flex;
+  text-align: center;
+  flex-flow: column nowrap;
+  font-size: 25rpx;
+  color: #eeeeee;
+  background-color: #e9c2a6;
+  padding-top: 12rpx;
+}
+.table_sum{
+  flex-grow: 1;
+  line-height: 80rpx;
+  text-align: center;
+  border-right: dashed 0.5rpx;
+  border-color: #e9c2a6;
+  color: #aaaaaa;
+  font-size: 30rpx;
+}
+.table_num_one{
+   flex-grow: 1;
+   border-right: dashed 0.5rpx;
+   border-color: #e9c2a6;
+   line-height: 80rpx;
+   text-align: center;
+   color: green;
+}
+.table_num_tow{
+  flex-grow: 1;
+  border-right: dashed 0.5rpx;
+  border-color: #e9c2a6;
+  line-height: 80rpx;
+  text-align: center;
+  color: green;
+}
+.table_num_three{
+  flex-grow: 1;
+  border-right: dashed 0.5rpx;
+  border-color: green;
+  color: green;
+  line-height: 80rpx;
+  text-align: center
+}
+.table_num_four{
+  flex-grow: 1;
+  border-right: dashed 0.5rpx;
+  border-color: red;
+  color: red;
+  line-height: 80rpx;
+  text-align: center
+}
+.table_num_five{
+  flex-grow: 1;
+  line-height: 80rpx;
+  text-align: center;
+  border-right: dashed 0.5rpx;
+  border-color: darkred;
+  color: darkred;
+}
+.table_num_six{
+  flex-grow: 1;
+  line-height: 80rpx;
+  text-align: center;
+  border-right: dashed 0.5rpx;
+  border-color: blue;
+  color: yellowgreen;
+}
+.table_num_seven{
+  flex-grow: 1;
+  line-height: 80rpx;
+  text-align: center;
+  color: blue;
+}

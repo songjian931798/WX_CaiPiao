@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class='container'>
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+    <block wx:for="{{movies}}" wx:for-item="item" wx:key="{{item.key}}" wx:for-index="index">  
+      <swiper-item>  
+        <image src="{{item.url}}" class="slide-image" mode="aspectFill"/>  
+      </swiper-item>  
+    </block>  
+  </swiper>  
+  <view class='notice_container'>
+    <view class='item_one'><text>公告: </text></view>
+    <swiper class="swiper_text"  autoplay="true" interval="4000" duration="1000" vertical='true'>  
+      <block wx:for="{{scrollMessage}}" wx:for-item="item" wx:key="{{item.key}}" wx:for-index="index">  
+        <swiper-item>  
+          <view class='item_tow'><text>{{item.message}}</text></view>
+        </swiper-item>  
+      </block>  
+  </swiper>
+  </view>
+  <block wx:for="{{itemDatas}}" wx:for-item="item" wx:key="*this" wx:for-index="index">
+    <view class='item_main' data-navTitle='{{item.itemTitle}}' data-tableName='{{item.itemTableName}}' bindtap='clickItem'>
+      <view class='item_img'><text>{{item.imgTitle}}</text></view>
+      <view class='item_message'>
+        <view class='item_message_top'>
+          <view class='item_title'>
+            <text>{{item.itemTitle}}</text>
+            <!-- <view wx:if="{{item.tip==1}}" class='tip'></view> -->
+          </view>
+          <view class='item_time'>{{item.itemTime}}</view>
+        </view>
+        <view class='item_message_buttom'>{{item.itemMessage}}</view>
+      </view>
+    </view>
+  </block>
+</view>
+

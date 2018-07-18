@@ -1,0 +1,35 @@
+.mainStytle{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.textArea{
+  width: 90%;
+  font-size: 35rpx;
+  margin-top: 15rpx;
+}
+.buttonSub{
+  height: 70rpx;
+  width: 90%;
+  background-color: #78f27d;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.buttonSub text{
+  color: white;
+  font-size: 35rpx;
+  line-height: 70rpx;
+}
+.explainMessage{
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90%;
+}
+.explainMessage text{
+  color: #aaaaaa;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}
